@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             move.Normalize();
 
             // 1 to fly
-            if (keyboard.digit1Key.isPressed)
+            if (keyboard.numpad1Key.isPressed)
             {
                 velocity.y = flySpeed;
             }
