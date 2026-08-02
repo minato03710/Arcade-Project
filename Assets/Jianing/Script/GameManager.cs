@@ -39,4 +39,13 @@ public class GameManager : MonoBehaviour
     {
         return score;
     }
+    public void RemoveScore(int amount)
+    {
+        score -= amount;
+
+        if (score < 0)
+            score = 0;
+
+        UpdateScoreUI();
+    }
 }

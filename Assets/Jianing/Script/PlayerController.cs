@@ -122,4 +122,10 @@ public class PlayerController : MonoBehaviour
             transform.forward = move;
         }
     }
+    public void KnockBack(Vector3 direction, float force)
+    {
+        CharacterController controller = GetComponent<CharacterController>();
+
+        controller.Move(direction.normalized * force);
+    }
 }
