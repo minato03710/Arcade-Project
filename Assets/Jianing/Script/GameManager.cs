@@ -1,0 +1,42 @@
+using TMPro;
+using UnityEngine;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance;
+
+    [Header("UI")]
+    public TMP_Text scoreText;
+
+    private int score = 0;
+
+    void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        UpdateScoreUI();
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+
+        UpdateScoreUI();
+    }
+
+    void UpdateScoreUI()
+    {
+        scoreText.text = "Score : " + score;
+    }
+
+    public int GetScore()
+    {
+        return score;
+    }
+}
