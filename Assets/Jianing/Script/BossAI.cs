@@ -196,7 +196,12 @@ public class BossAI : MonoBehaviour
         if (!hit.gameObject.CompareTag("Player"))
             return;
 
-        GameManager.Instance.RemoveScore(damageScore);
+        PlayerHealth health = hit.gameObject.GetComponent<PlayerHealth>();
+
+        if (health != null)
+        {
+            health.TakeDamage(1);
+        }
 
         PlayerController player =
             hit.gameObject.GetComponent<PlayerController>();
