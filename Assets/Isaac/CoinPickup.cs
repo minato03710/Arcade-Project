@@ -1,25 +1,33 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Added New Input System namespace
+using UnityEngine.InputSystem;
 
 public class CoinPickup : MonoBehaviour
 {
-    public AudioSource audioSource;
+    [Header("Pickup Settings")]
+    public AudioClip coinSound;       // Drag your .wav / .mp3 audio file directly here
+    public GameObject coinVfxPrefab; // Drag your particle prefab here
 
     private void OnTriggerEnter(Collider other)
     {
-        if (audioSource != null)
+        if (other.CompareTag("Player"))
         {
-            audioSource.Play();
-            Debug.Log("Coin pickup SFX played!");
+            // 1. Play Audio at camera position (Guarantees full volume without 3D distance fading)
+            if (coinSound != null)
+            {
+                Vector3 soundPos = Camera.main != null ? Camera.main.transform.position : transform.position;
+                AudioSource.PlayClipAtPoint(coinSound, soundPos, 1.0f);
+            }
+
+            // 2. Spawn Particle VFX
+            if (coinVfxPrefab != null)
+            {
+                Instantiate(coinVfxPrefab, transform.position, Quaternion.identity);
+            }
+
+            // 3. Destroy the coin
+            Destroy(gameObject);
         }
     }
 
-    private void Update()
-    {
-        // New Input System syntax for checking Spacebar press
-        if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            if (audioSource != null) audioSource.Play();
-        }
-    }
-}
+
+ }
