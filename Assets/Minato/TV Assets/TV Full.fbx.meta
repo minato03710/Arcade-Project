@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4e07540657ce24642a4e2fb0fd9896cb
+guid: e0ec4906d07cf9e4aa1e20ef616433eb
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,33 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Beak
-    second: {fileID: 2100000, guid: 2f492f6ff279cb54eb7b37277c3350ff, type: 2}
+      name: Brown
+    second: {fileID: 2100000, guid: 987fa7c6afa61cb4c8be735e2ce0d76f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BirdBodyTexture
-    second: {fileID: 2100000, guid: fb51924abf5f87647bf022c6cb940d0a, type: 2}
+      name: Dark
+    second: {fileID: 2100000, guid: c6cdd657d1fcaa54e8269ca2856fb020, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BirdTailTexture
-    second: {fileID: 2100000, guid: bc940394071cce046a54a4fe6f9f1e7b, type: 2}
+      name: DarkBrown
+    second: {fileID: 2100000, guid: ae4cfb5c99b29fd46a0f079142486b9f, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BirdWingTexture
-    second: {fileID: 2100000, guid: 4b107c47e3994d04aa77a6e63e91f570, type: 2}
+      name: Details
+    second: {fileID: 2100000, guid: 5ffd7e902ed91b949bf2ab0e04d5a1cc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Legs
-    second: {fileID: 2100000, guid: a3800a1dc6747724497c1f27c822c10c, type: 2}
+      name: ScreenPlaceholder
+    second: {fileID: 2100000, guid: 6466c45c8896d664b8567df060791108, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Main
-    second: {fileID: 2100000, guid: 8ef5b54491c691d4aa3c7c877ea35262, type: 2}
+      name: Shadow
+    second: {fileID: 2100000, guid: 3a733a4ecd8a12c4f90bc5557f5655f8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
