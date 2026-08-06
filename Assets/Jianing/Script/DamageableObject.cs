@@ -2,37 +2,21 @@ using UnityEngine;
 
 public class DamageableObject : MonoBehaviour
 {
-    public int maxHealth = 10;
+    [Header("Health")]
+    public int maxHealth = 5;
+
+    [Header("Destroy Time")]
+    public float destroyTime = 3f;
 
     [Header("Score")]
     public int scoreReward = 20;
-    private int currentHealth;
 
-    private float timer;
-
-
-    void Start()
+    public void DestroyObject()
     {
-        currentHealth = maxHealth;
-    }
+        GameManager.Instance.AddScore(scoreReward);
 
-    public void Damage(float damagePerSecond)
-    {
-        timer += Time.deltaTime;
+        Debug.Log(gameObject.name + " Destroyed!");
 
-        if (timer >= 1f)
-        {
-            timer = 0f;
-
-            currentHealth -= Mathf.RoundToInt(damagePerSecond);
-
-            Debug.Log(gameObject.name + " HP : " + currentHealth);
-
-            if (currentHealth <= 0)
-            {
-                GameManager.Instance.AddScore(scoreReward);
-                Destroy(gameObject);
-            }
-        }
+        Destroy(gameObject);
     }
 }
