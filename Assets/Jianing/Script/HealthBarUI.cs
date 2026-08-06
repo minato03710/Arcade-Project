@@ -9,7 +9,7 @@ public class HealthBarUI : MonoBehaviour
 
     public TMP_Text healthText;
 
-    [Header("每一点生命对应多少像素")]
+    [Header("How many pixels correspond to each unit of life")]
     public float healthWidth = 40f;
 
     void Update()
