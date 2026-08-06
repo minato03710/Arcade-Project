@@ -166,10 +166,16 @@ public class BossAI : MonoBehaviour
         if (health != null && health.IsDown)
         {
             targetPlayer = null;
+
             currentState = BossState.Patrol;
+
             targetLost = true;
 
+            waiting = false;
+            waitTimer = 0f;
+
             PickNewPatrolPoint();
+
             return;
         }
 
@@ -229,8 +235,14 @@ public class BossAI : MonoBehaviour
                 if (health.IsDown)
                 {
                     targetPlayer = null;
+
                     currentState = BossState.Patrol;
+
                     targetLost = true;
+
+                    // Á¢¼´¿ªÊ¼Ñ²Âß
+                    waiting = false;
+                    waitTimer = 0f;
 
                     PickNewPatrolPoint();
 
