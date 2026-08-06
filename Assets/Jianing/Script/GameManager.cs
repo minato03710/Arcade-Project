@@ -48,4 +48,13 @@ public class GameManager : MonoBehaviour
 
         UpdateScoreUI();
     }
+    public void CheckGameOver(PlayerHealth p1, PlayerHealth p2)
+    {
+        if (p1.IsDown && p2.IsDown)
+        {
+            Debug.Log("GAME OVER");
+
+            Time.timeScale = 0f;
+        }
+    }
 }

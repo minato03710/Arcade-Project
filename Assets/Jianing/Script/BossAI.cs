@@ -45,7 +45,7 @@ public class BossAI : MonoBehaviour
     private Vector3 patrolTarget;
 
     private bool waiting;
-
+    private bool targetLost = false;
     private float waitTimer;
 
     void Start()
@@ -77,42 +77,46 @@ public class BossAI : MonoBehaviour
 
     void UpdateTarget()
     {
-        float d1 = Vector3.Distance(transform.position, player1.position);
-        float d2 = Vector3.Distance(transform.position, player2.position);
+        // 如果刚刚击倒玩家，就保持巡逻
+        if (targetLost)
+        {
+            currentState = BossState.Patrol;
 
-        Transform nearest = d1 < d2 ? player1 : player2;
+            // 当Boss到达新的巡逻点之后，再允许重新寻找目标
+            if (!waiting)
+                return;
+        }
+
+        PlayerHealth p1Health = player1.GetComponent<PlayerHealth>();
+        PlayerHealth p2Health = player2.GetComponent<PlayerHealth>();
+
+        bool p1Alive = p1Health != null && !p1Health.IsDown;
+        bool p2Alive = p2Health != null && !p2Health.IsDown;
+
+        // 两个玩家都倒地
+        if (!p1Alive && !p2Alive)
+        {
+            targetPlayer = null;
+            currentState = BossState.Patrol;
+            return;
+        }
+
+        float d1 = p1Alive ? Vector3.Distance(transform.position, player1.position) : Mathf.Infinity;
+        float d2 = p2Alive ? Vector3.Distance(transform.position, player2.position) : Mathf.Infinity;
 
         float nearestDistance = Mathf.Min(d1, d2);
 
-        if (currentState == BossState.Patrol)
+        if (nearestDistance > detectRange)
         {
-            if (nearestDistance <= detectRange)
-            {
-                targetPlayer = nearest;
-                currentState = BossState.Chase;
-            }
+            targetPlayer = null;
+            currentState = BossState.Patrol;
+            return;
         }
-        else
-        {
-            if (nearestDistance > loseRange)
-            {
-                currentState = BossState.Patrol;
-                targetPlayer = null;
-                PickNewPatrolPoint();
-                return;
-            }
 
-            if (targetPlayer != null)
-            {
-                float currentDistance =
-                    Vector3.Distance(transform.position, targetPlayer.position);
+        targetPlayer = d1 < d2 ? player1 : player2;
+        currentState = BossState.Chase;
 
-                if (currentDistance - nearestDistance > switchThreshold)
-                {
-                    targetPlayer = nearest;
-                }
-            }
-        }
+        targetLost = false;
     }
 
     //------------------------------------------------
@@ -123,11 +127,13 @@ public class BossAI : MonoBehaviour
     {
         if (waiting)
         {
-            waitTimer += Time.deltaTime;
-
             if (waitTimer >= waitTime)
             {
                 waiting = false;
+
+                // 巡逻结束后允许重新寻找目标
+                targetLost = false;
+
                 PickNewPatrolPoint();
             }
 
@@ -150,7 +156,22 @@ public class BossAI : MonoBehaviour
     void Chase()
     {
         if (targetPlayer == null)
+        {
+            currentState = BossState.Patrol;
             return;
+        }
+
+        PlayerHealth health = targetPlayer.GetComponent<PlayerHealth>();
+
+        if (health != null && health.IsDown)
+        {
+            targetPlayer = null;
+            currentState = BossState.Patrol;
+            targetLost = true;
+
+            PickNewPatrolPoint();
+            return;
+        }
 
         MoveTo(targetPlayer.position);
     }
@@ -200,7 +221,22 @@ public class BossAI : MonoBehaviour
 
         if (health != null)
         {
-            health.TakeDamage(1);
+            if (!health.IsDown)
+            {
+                health.TakeDamage(1);
+
+                // 如果这一击让玩家倒地
+                if (health.IsDown)
+                {
+                    targetPlayer = null;
+                    currentState = BossState.Patrol;
+                    targetLost = true;
+
+                    PickNewPatrolPoint();
+
+                    return;
+                }
+            }
         }
 
         PlayerController player =
