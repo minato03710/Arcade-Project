@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &73778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &539006506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -789,7 +789,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0d183cd6317c7774585ca93fdab89cf2, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -903,10 +903,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be32531cadf8b00479b6bcab3f7fc201, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndScreenHandler
-  gameEnded: 0
-  PointsHolder: {fileID: 0}
-  PointsAmount: 0
-  PointsAddition: 0
+  gameManagerScript: {fileID: 1887585038}
+  ScoreAmount: 0
+  ScoreAddition: 0
+  finalScore: 0
+  ReplayButton: {fileID: 1346023792}
+  MenuButton: {fileID: 539006505}
+  CanvasPoints: {fileID: 73777}
+  CanvasBG: {fileID: 2078072049}
+  ScoreUI: {fileID: 1377566422}
+  AudioSource: {fileID: 945516416}
 --- !u!1 &1120846557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,7 +1068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1346023793
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1441,6 +1447,51 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1887585037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887585039}
+  - component: {fileID: 1887585038}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1887585038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887585037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3711161a62c88004d86f147a78b346f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PointsExample
+  score: 9567
+--- !u!4 &1887585039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887585037}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.7925, y: -8.46425, z: 93.56206}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2078072049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,7 +1510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2078072050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1551,3 +1602,4 @@ SceneRoots:
   - {fileID: 689921353}
   - {fileID: 784305910}
   - {fileID: 945516417}
+  - {fileID: 1887585039}

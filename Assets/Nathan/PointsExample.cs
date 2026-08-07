@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class PointsExample : MonoBehaviour
 {
+
+    public int score = 10000;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
