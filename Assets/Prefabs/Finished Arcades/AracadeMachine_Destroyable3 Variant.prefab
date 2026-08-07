@@ -177,10 +177,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3249582390385474124, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4759860725746389213, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}
       propertyPath: m_Name
       value: AracadeMachine_Destroyable3 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4843085108285925145, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d907fe49cac19f449ce040a538e23ea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

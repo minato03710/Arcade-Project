@@ -8,6 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1544879915247763013, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544879915247763013, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544879915247763013, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1544879915247763013, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3992387669578493048, guid: 128677825997acf4db465b8221b22738, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45.71
@@ -48,6 +64,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4252457288615501605, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252457288615501605, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4252457288615501605, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5020423040484985352, guid: 128677825997acf4db465b8221b22738, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -60,9 +88,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2.14
       objectReference: {fileID: 0}
+    - target: {fileID: 5896871487783533291, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281373869432940727, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6d907fe49cac19f449ce040a538e23ea, type: 2}
     - target: {fileID: 6963154322390790582, guid: 128677825997acf4db465b8221b22738, type: 3}
       propertyPath: m_Name
       value: ArcadeMachine_Destroyable1  Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723311599631439629, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723311599631439629, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_LengthScale
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386427239819943264, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8876835450386719329, guid: 128677825997acf4db465b8221b22738, type: 3}
       propertyPath: m_LocalPosition.x

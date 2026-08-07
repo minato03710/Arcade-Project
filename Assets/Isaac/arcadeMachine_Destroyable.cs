@@ -36,7 +36,11 @@ public class ArcadeMachine : MonoBehaviour
         if (brokenModel != null) brokenModel.SetActive(true);
 
         // 2. Trigger VFX
-        if (sparksVFX != null) sparksVFX.Play();
+        if (sparksVFX != null) 
+        {
+    sparksVFX.gameObject.SetActive(true); // <-- Turns on the object first!
+    sparksVFX.Play();
+}
         if (smokeVFX != null) smokeVFX.SetActive(true);
 
         // 3. Play Break SFX
