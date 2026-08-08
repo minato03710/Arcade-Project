@@ -2,24 +2,24 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class HowToPlayScreen : MonoBehaviour
+public class ControlsScreen : MonoBehaviour
 {
-    public bool controlsPressed; // Checks if the Controls Button was pressed
+    public bool objectivePressed; // Checks if the Objective Button was pressed
     public bool returnPressed; // Checks if the Return Button was pressed
     public SceneChanger sceneChanger;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
     {
-        controlsPressed = false; // Both buttons start not pressed
+        objectivePressed = false; // Both buttons start not pressed
         returnPressed = false;
     }
 
     public void Update()
     {
-        if(controlsPressed)
+        if(objectivePressed)
         {
-            Controls();
+            Objective();
         }
 
         if(returnPressed)
@@ -28,9 +28,10 @@ public class HowToPlayScreen : MonoBehaviour
         }
     }
 
-    public void ControlsButtonPressed() // Called by the Controls Button when pressed
+
+    public void ObjectiveButtonPressed() // Called by the Controls Button when pressed
     {
-        controlsPressed = true;
+        objectivePressed = true;
     }
 
     public void ReturnButtonPressed() // Called by the Return Button when pressed
@@ -38,10 +39,9 @@ public class HowToPlayScreen : MonoBehaviour
         returnPressed = true;
     }
 
-    public void Controls()
+    public void Objective()
     {
-        gameObject.SetActive(false);
-        controlsPressed = false;
+        Debug.Log("Objective pressed");
     }
 
     public void Return()
