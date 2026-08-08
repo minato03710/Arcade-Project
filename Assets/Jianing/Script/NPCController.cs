@@ -6,14 +6,24 @@ public class NPCController : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 2f;
 
-    [Header("Random Movement")]
+    [Header("Random Movement Area")]
     public float minX = -20f;
     public float maxX = 20f;
+
     public float minZ = -20f;
     public float maxZ = 20f;
 
     [Header("Wait")]
     public float waitTime = 2f;
+
+    [Header("Attack")]
+    public float attackTime = 1f;
+
+    [Header("Fall")]
+    public Transform model;
+    public float fallAngle = 90f;
+    public float fallSpeed = 5f;
+
 
     private CharacterController controller;
 
@@ -23,33 +33,40 @@ public class NPCController : MonoBehaviour
 
     private float waitTimer = 0f;
 
-    // Has the NPC already been attacked
-    private bool hasBeenAttacked = false;
+    private bool isStopped = false;
+
+    private bool isFalling = false;
+
+    private Quaternion targetRotation;
+
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
 
-        // Choose the first random position at the start of the game
         PickNewTarget();
     }
 
+
     void Update()
     {
-        // NPC stops moving after being attacked
-        if (hasBeenAttacked)
+        // Stop normal movement after being attacked
+        if (isStopped)
+        {
+            FallDown();
             return;
+        }
 
         RandomMove();
     }
 
-    //========================================
-    // random move
-    //========================================
+
+    //==================================================
+    // Random Movement
+    //==================================================
 
     void RandomMove()
     {
-        // NPC is waiting
         if (waiting)
         {
             waitTimer += Time.deltaTime;
@@ -57,6 +74,7 @@ public class NPCController : MonoBehaviour
             if (waitTimer >= waitTime)
             {
                 waiting = false;
+
                 waitTimer = 0f;
 
                 PickNewTarget();
@@ -65,38 +83,50 @@ public class NPCController : MonoBehaviour
             return;
         }
 
-        // Move toward the goal
-        Vector3 direction = targetPosition - transform.position;
+
+        Vector3 direction =
+            targetPosition - transform.position;
 
         direction.y = 0f;
+
 
         if (direction.magnitude > 0.1f)
         {
             direction.Normalize();
 
             controller.Move(
-                direction * moveSpeed * Time.deltaTime
+                direction *
+                moveSpeed *
+                Time.deltaTime
             );
 
             transform.forward = direction;
         }
 
-        // Arrive at the destination
-        if (Vector3.Distance(transform.position, targetPosition) < 0.5f)
+
+        if (Vector3.Distance(
+            transform.position,
+            targetPosition) < 0.5f)
         {
             waiting = true;
+
             waitTimer = 0f;
         }
     }
 
-    //========================================
-    // Randomly select a target
-    //========================================
+
+    //==================================================
+    // Pick Random Target
+    //==================================================
 
     void PickNewTarget()
     {
-        float randomX = Random.Range(minX, maxX);
-        float randomZ = Random.Range(minZ, maxZ);
+        float randomX =
+            Random.Range(minX, maxX);
+
+        float randomZ =
+            Random.Range(minZ, maxZ);
+
 
         targetPosition = new Vector3(
             randomX,
@@ -105,15 +135,98 @@ public class NPCController : MonoBehaviour
         );
     }
 
-    //========================================
-    // be attacked
-    //========================================
 
-    public void StopMoving()
+    //==================================================
+    // Stop NPC
+    //==================================================
+
+    public void StopNPC()
     {
-        hasBeenAttacked = true;
+        if (isStopped)
+            return;
+
+        isStopped = true;
 
         waiting = false;
+
         waitTimer = 0f;
+
+        // Stop movement immediately
+        moveSpeed = 0f;
+
+        // Start falling animation
+        StartFalling();
+
+        Debug.Log(
+            gameObject.name +
+            " has been stopped!"
+        );
+
+
+    }
+    public bool IsStopped()
+    {
+        return isStopped;
+    }
+
+
+    //==================================================
+    // Start Falling
+    //==================================================
+
+    void StartFalling()
+    {
+        if (model == null)
+        {
+            Debug.LogWarning(
+                "NPC Model is not assigned!"
+            );
+
+            return;
+        }
+
+
+        isFalling = true;
+
+
+        // Rotate around the local X axis
+        targetRotation =
+            model.localRotation *
+            Quaternion.Euler(
+                fallAngle,
+                0f,
+                0f
+            );
+    }
+
+
+    //==================================================
+    // Falling Animation
+    //==================================================
+
+    void FallDown()
+    {
+        if (!isFalling)
+            return;
+
+
+        model.localRotation =
+            Quaternion.RotateTowards(
+                model.localRotation,
+                targetRotation,
+                fallSpeed * Time.deltaTime * 90f
+            );
+
+
+        // Stop rotating when the target angle is reached
+        if (Quaternion.Angle(
+                model.localRotation,
+                targetRotation) < 0.5f)
+        {
+            model.localRotation =
+                targetRotation;
+
+            isFalling = false;
+        }
     }
 }

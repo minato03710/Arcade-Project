@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2262790051233939563}
   - component: {fileID: 198677448007828438}
+  - component: {fileID: -3891514460750537969}
   m_Layer: 0
   m_Name: ArcadeMachine_Destroyable7 1 (1)
   m_TagString: Untagged
@@ -57,6 +58,21 @@ MonoBehaviour:
   audioSource: {fileID: 1175724931483087619}
   destroySFX: {fileID: 0}
   electricLoopSFX: {fileID: 0}
+--- !u!114 &-3891514460750537969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2845614786950996985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d42a29df57b1fe4894fb258578a5063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
+  maxHealth: 5
+  destroyTime: 1
+  scoreReward: 20
 --- !u!1 &3173226680068815314
 GameObject:
   m_ObjectHideFlags: 0

@@ -5119,6 +5119,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4759860725746389213, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7539373087025656221}
+    - targetCorrespondingSourceObject: {fileID: 4759860725746389213, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7883220524448365821}
   m_SourcePrefab: {fileID: 100100000, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}
 --- !u!1 &1731638117785974053 stripped
 GameObject:
@@ -5144,6 +5147,21 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   destroySFX: {fileID: 8300000, guid: eab6470512b0fed41976703a0f206708, type: 3}
   electricLoopSFX: {fileID: 0}
+--- !u!114 &7883220524448365821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731638117785974053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d42a29df57b1fe4894fb258578a5063, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
+  maxHealth: 5
+  destroyTime: 1
+  scoreReward: 20
 --- !u!198 &2692522346219085373 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 9177119306887625669, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}
