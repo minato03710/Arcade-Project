@@ -26,9 +26,6 @@ public class BossAI : MonoBehaviour
     public float detectRange = 10f;
     public float loseRange = 15f;
 
-    [Header("Target Switch")]
-    public float switchThreshold = 2f;
-
     [Header("Attack")]
     public int damageScore = 10;
     public float knockbackForce = 2f;
@@ -44,14 +41,17 @@ public class BossAI : MonoBehaviour
 
     private Vector3 patrolTarget;
 
-    private bool waiting;
+    private bool waiting = false;
+
     private bool targetLost = false;
-    private float waitTimer;
+
+    private float waitTimer = 0f;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
 
+        // The first patrol point is randomly selected at the start of the game.
         PickNewPatrolPoint();
     }
 
@@ -71,29 +71,37 @@ public class BossAI : MonoBehaviour
         }
     }
 
-    //------------------------------------------------
-    // 更新目标
-    //------------------------------------------------
+    //==================================================
+    // Update goal
+    //==================================================
 
     void UpdateTarget()
     {
-        // 如果刚刚击倒玩家，就保持巡逻
+        // Boss just knocked down the player
+        // Don't immediately look for another player during this period.
         if (targetLost)
         {
             currentState = BossState.Patrol;
 
-            // 当Boss到达新的巡逻点之后，再允许重新寻找目标
-            if (!waiting)
-                return;
+            return;
         }
 
-        PlayerHealth p1Health = player1.GetComponent<PlayerHealth>();
-        PlayerHealth p2Health = player2.GetComponent<PlayerHealth>();
+        if (player1 == null || player2 == null)
+            return;
 
-        bool p1Alive = p1Health != null && !p1Health.IsDown;
-        bool p2Alive = p2Health != null && !p2Health.IsDown;
+        PlayerHealth p1Health =
+            player1.GetComponent<PlayerHealth>();
 
-        // 两个玩家都倒地
+        PlayerHealth p2Health =
+            player2.GetComponent<PlayerHealth>();
+
+        bool p1Alive =
+            p1Health != null && !p1Health.IsDown;
+
+        bool p2Alive =
+            p2Health != null && !p2Health.IsDown;
+
+        // Both players collapsed to the ground.
         if (!p1Alive && !p2Alive)
         {
             targetPlayer = null;
@@ -101,11 +109,17 @@ public class BossAI : MonoBehaviour
             return;
         }
 
-        float d1 = p1Alive ? Vector3.Distance(transform.position, player1.position) : Mathf.Infinity;
-        float d2 = p2Alive ? Vector3.Distance(transform.position, player2.position) : Mathf.Infinity;
+        float d1 = p1Alive
+            ? Vector3.Distance(transform.position, player1.position)
+            : Mathf.Infinity;
+
+        float d2 = p2Alive
+            ? Vector3.Distance(transform.position, player2.position)
+            : Mathf.Infinity;
 
         float nearestDistance = Mathf.Min(d1, d2);
 
+        // Patrol player is not within detection range
         if (nearestDistance > detectRange)
         {
             targetPlayer = null;
@@ -113,45 +127,57 @@ public class BossAI : MonoBehaviour
             return;
         }
 
+        // Select the nearest alive player
         targetPlayer = d1 < d2 ? player1 : player2;
-        currentState = BossState.Chase;
 
-        targetLost = false;
+        currentState = BossState.Chase;
     }
 
-    //------------------------------------------------
-    // 巡逻
-    //------------------------------------------------
+    //==================================================
+    // patrol
+    //==================================================
 
     void Patrol()
     {
+        // Boss has just knocked down the player and entered patrol mode.
+
         if (waiting)
         {
+
+            // Let waiting time truly increase
+            waitTimer += Time.deltaTime;
+
             if (waitTimer >= waitTime)
             {
                 waiting = false;
 
-                // 巡逻结束后允许重新寻找目标
+                waitTimer = 0f;
+
+                // Waiting to end
                 targetLost = false;
 
+                // Re-select patrol point
                 PickNewPatrolPoint();
             }
 
             return;
         }
 
+        // Move to patrol point
         MoveTo(patrolTarget);
 
+        // Arrived at patrol point
         if (Vector3.Distance(transform.position, patrolTarget) < 0.5f)
         {
             waiting = true;
-            waitTimer = 0;
+
+            waitTimer = 0f;
         }
     }
 
-    //------------------------------------------------
-    // 追玩家
-    //------------------------------------------------
+    //==================================================
+    // Chase the player
+    //==================================================
 
     void Chase()
     {
@@ -161,17 +187,22 @@ public class BossAI : MonoBehaviour
             return;
         }
 
-        PlayerHealth health = targetPlayer.GetComponent<PlayerHealth>();
+        PlayerHealth health =
+            targetPlayer.GetComponent<PlayerHealth>();
 
+        //The target has fallen.
         if (health != null && health.IsDown)
         {
             targetPlayer = null;
 
             currentState = BossState.Patrol;
 
+            // Mark Boss has just knocked down the target
             targetLost = true;
 
+            // Start a new patrol now
             waiting = false;
+
             waitTimer = 0f;
 
             PickNewPatrolPoint();
@@ -179,89 +210,129 @@ public class BossAI : MonoBehaviour
             return;
         }
 
+        // If the target is too far away
+        float distance =
+            Vector3.Distance(transform.position, targetPlayer.position);
+
+        if (distance > loseRange)
+        {
+            targetPlayer = null;
+
+            currentState = BossState.Patrol;
+
+            return;
+        }
+
         MoveTo(targetPlayer.position);
     }
 
-    //------------------------------------------------
-    // 公共移动
-    //------------------------------------------------
+    //==================================================
+    // Move
+    //==================================================
 
     void MoveTo(Vector3 target)
     {
-        Vector3 direction = target - transform.position;
+        Vector3 direction =
+            target - transform.position;
 
-        direction.y = 0;
+        direction.y = 0f;
 
         if (direction.magnitude < 0.1f)
             return;
 
         direction.Normalize();
 
-        controller.Move(direction * moveSpeed * Time.deltaTime);
+        controller.Move(
+            direction *
+            moveSpeed *
+            Time.deltaTime
+        );
 
         transform.forward = direction;
     }
 
-    //------------------------------------------------
-    // 新巡逻点
-    //------------------------------------------------
+    //==================================================
+    //Randomly select patrol points
+    //==================================================
 
     void PickNewPatrolPoint()
     {
+        float randomX =
+            Random.Range(minX, maxX);
+
+        float randomZ =
+            Random.Range(minZ, maxZ);
+
         patrolTarget = new Vector3(
-            Random.Range(minX, maxX),
+            randomX,
             transform.position.y,
-            Random.Range(minZ, maxZ));
+            randomZ
+        );
     }
 
-    //------------------------------------------------
-    // 碰撞玩家
-    //------------------------------------------------
+    //==================================================
+    // Boss collides with player
+    //==================================================
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
+    private void OnControllerColliderHit(
+        ControllerColliderHit hit)
     {
         if (!hit.gameObject.CompareTag("Player"))
             return;
 
-        PlayerHealth health = hit.gameObject.GetComponent<PlayerHealth>();
+        PlayerHealth health =
+            hit.gameObject.GetComponent<PlayerHealth>();
 
-        if (health != null)
+        if (health == null)
+            return;
+
+        // Players who have fallen are no longer affected by the boss's attacks.
+        if (health.IsDown)
+            return;
+
+        // Take damage
+        health.TakeDamage(1);
+
+        // The player was knocked down by this attack.
+        if (health.IsDown)
         {
-            if (!health.IsDown)
-            {
-                health.TakeDamage(1);
+            targetPlayer = null;
 
-                // 如果这一击让玩家倒地
-                if (health.IsDown)
-                {
-                    targetPlayer = null;
+            currentState = BossState.Patrol;
 
-                    currentState = BossState.Patrol;
+            targetLost = true;
 
-                    targetLost = true;
+            // Resume patrol immediately
+            waiting = false;
 
-                    // 立即开始巡逻
-                    waiting = false;
-                    waitTimer = 0f;
+            waitTimer = 0f;
 
-                    PickNewPatrolPoint();
+            PickNewPatrolPoint();
 
-                    return;
-                }
-            }
+            return;
         }
 
+        // Defeat the player
         PlayerController player =
             hit.gameObject.GetComponent<PlayerController>();
 
         if (player != null)
         {
             Vector3 dir =
-                hit.transform.position - transform.position;
+                hit.transform.position -
+                transform.position;
 
-            dir.y = 0;
+            dir.y = 0f;
 
-            player.KnockBack(dir, knockbackForce);
+            if (dir.magnitude > 0.01f)
+            {
+                dir.Normalize();
+
+                player.KnockBack(
+                    dir,
+                    knockbackForce
+                );
+            }
         }
     }
 }
