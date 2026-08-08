@@ -11,6 +11,8 @@ public class PlayerAttack : MonoBehaviour
 
     public ProgressBarUI progressUI;
 
+    public AudioSource audioSource;
+
     private float attackTimer;
 
     private DamageableObject currentObject;
@@ -75,6 +77,8 @@ public class PlayerAttack : MonoBehaviour
         if (attackTimer >= currentObject.destroyTime)
         {
             currentObject.DestroyObject();
+
+            audioSource.Play();
 
             attackTimer = 0;
 

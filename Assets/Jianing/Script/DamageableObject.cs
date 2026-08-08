@@ -13,10 +13,20 @@ public class DamageableObject : MonoBehaviour
 
     public void DestroyObject()
     {
-        GameManager.Instance.AddScore(scoreReward);
+        Debug.Log("meow");
+        if (maxHealth == 0)
+        {
+            Debug.Log("Destroyed Object");
+            GameManager.Instance.AddScore(scoreReward);
 
-        Debug.Log(gameObject.name + " Destroyed!");
+            Debug.Log(gameObject.name + " Destroyed!");
 
-        Destroy(gameObject);
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("Damaged Object");
+            maxHealth -= 1;
+        }
     }
 }
