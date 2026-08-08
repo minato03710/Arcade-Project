@@ -5,9 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/old.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Minato/StartScreen.unity
+    guid: ca63b29dbc27aed45b71240c3d35ccda
+  - enabled: 1
+    path: Assets/Minato/HowToPlay.unity
+    guid: feaffe6b7c90ff84ea14223e7a5456a3
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: 2636884c9be038c49b64bb334fcfc870
+  - enabled: 0
+    path: Assets/Scenes/Environment.unity
+    guid: 71a5e6f0f74d00644a7fc0991a421626
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
