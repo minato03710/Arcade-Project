@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight = 2f;
     public float gravity = -20f;
     public float flySpeed = 6f;
+    public float turnSpeed = 15f;
 
     private CharacterController controller;
 
@@ -99,6 +100,14 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if (move != Vector3.zero)
+        {
+            // Calculate the rotation needed to face the movement direction
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+            
+            // Smoothly blend from current rotation to target rotation over time
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        }
         
         // gravity
        
@@ -127,5 +136,32 @@ public class PlayerController : MonoBehaviour
         CharacterController controller = GetComponent<CharacterController>();
 
         controller.Move(direction.normalized * force);
+
+    }
+    [Header("Physics Interaction")]
+    [Tooltip("How hard the player pushes Rigidbody objects")]
+    public float pushPower = 2.0f;
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Rigidbody body = hit.collider.attachedRigidbody;
+
+        // Make sure the object has a Rigidbody and isn't static (kinematic)
+        if (body == null || body.isKinematic)
+        {
+            return;
+        }
+
+        // We don't want to push objects below us (like the floor)
+        if (hit.moveDirection.y < -0.3f)
+        {
+            return;
+        }
+
+        // Calculate push direction from move direction (only on X and Z axes)
+        Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
+
+        // Apply the push force to the Rigidbody object
+        body.linearVelocity = pushDir * pushPower;
     }
 }
