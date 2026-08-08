@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     public TMP_Text scoreText;
 
-    private int score = 0;
+    public int score = 0;  //I changed from private to public -Nathan
 
     void Awake()
     {
