@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class ArcadeMachine : MonoBehaviour
 {
@@ -13,48 +12,96 @@ public class ArcadeMachine : MonoBehaviour
 
     [Header("SFX References")]
     public AudioSource audioSource;
-    public AudioClip destroySFX;       // Instant crash / glass break
-    public AudioClip electricLoopSFX;  // (Optional) Continuous buzzing sound after it breaks
+    public AudioClip destroySFX;
+    public AudioClip electricLoopSFX;
 
     private bool isBroken = false;
 
-    void Update()
+
+    void Start()
     {
-        if (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame && !isBroken)
-        {
-            BreakMachine();
-        }
+        // Show the normal model when the game starts
+        if (normalModel != null)
+            normalModel.SetActive(true);
+
+        // Hide the broken model when the game starts
+        if (brokenModel != null)
+            brokenModel.SetActive(false);
+
+        // Disable smoke when the game starts
+        if (smokeVFX != null)
+            smokeVFX.SetActive(false);
+
+        // Disable sparks when the game starts
+        if (sparksVFX != null)
+            sparksVFX.gameObject.SetActive(false);
     }
+
 
     public void BreakMachine()
     {
-        if (isBroken) return;
+        if (isBroken)
+            return;
+
         isBroken = true;
 
+        Debug.Log("Machine Broken!");
+
+
+        //========================================
         // 1. Swap Models
-        if (normalModel != null) normalModel.SetActive(false);
-        if (brokenModel != null) brokenModel.SetActive(true);
+        //========================================
 
-        // 2. Trigger VFX
-        if (sparksVFX != null) 
+        if (normalModel != null)
+            normalModel.SetActive(false);
+
+        if (brokenModel != null)
+            brokenModel.SetActive(true);
+
+
+        //========================================
+        // 2. Play Sparks VFX
+        //========================================
+
+        if (sparksVFX != null)
         {
-    sparksVFX.gameObject.SetActive(true); // <-- Turns on the object first!
-    sparksVFX.Play();
-}
-        if (smokeVFX != null) smokeVFX.SetActive(true);
+            sparksVFX.gameObject.SetActive(true);
 
-        // 3. Play Break SFX
+            sparksVFX.Play();
+        }
+
+
+        //========================================
+        // 3. Play Smoke VFX
+        //========================================
+
+        if (smokeVFX != null)
+        {
+            smokeVFX.SetActive(true);
+        }
+
+
+        //========================================
+        // 4. Play Destruction Sound
+        //========================================
+
         if (audioSource != null && destroySFX != null)
         {
             audioSource.PlayOneShot(destroySFX);
         }
 
-        // 4. (Optional) Start continuous electric buzz after breaking
+
+        //========================================
+        // 5. Play Continuous Electric Sound
+        //========================================
+
         if (audioSource != null && electricLoopSFX != null)
         {
             audioSource.clip = electricLoopSFX;
+
             audioSource.loop = true;
-            audioSource.Play(); // Starts looping the buzz sound!
+
+            audioSource.Play();
         }
     }
 }
