@@ -16,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
     private float attackTimer;
 
     private DamageableObject currentObject;
+    
 
     void Update()
     {
