@@ -144,13 +144,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 14524175}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.021566609, y: -0.052610274, z: 0.2824713, w: 0.9575892}
+  m_LocalRotation: {x: 0.28134036, y: -0.13895698, z: 0.25149417, w: 0.91558135}
   m_LocalPosition: {x: -21.3, y: 39.5, z: -146.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -0.664, y: -6.485, z: 32.908}
+  m_LocalEulerAnglesHint: {x: 35.808, y: -8.005, z: 28.129}
 --- !u!114 &14524177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6651,8 +6651,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398742847}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.202493, y: 0.07561776, z: -0.015684834, w: 0.9762339}
-  m_LocalPosition: {x: -22.906061, y: 44.021114, z: -157.20502}
+  m_LocalRotation: {x: 0.3319494, y: -0.050817516, z: 0.017912097, w: 0.9417571}
+  m_LocalPosition: {x: -13.444265, y: 98.26564, z: -219.4798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25589,7 +25589,7 @@ MonoBehaviour:
   ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
   VerticalArmLength: 6
   CameraSide: 1
-  CameraDistance: 10.00001
+  CameraDistance: 93.79067
   AvoidObstacles:
     Enabled: 0
     CollisionFilter:
@@ -25650,8 +25650,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797586886}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.202493, y: 0.07561776, z: -0.015684834, w: 0.9762339}
-  m_LocalPosition: {x: -22.906061, y: 44.021114, z: -157.20502}
+  m_LocalRotation: {x: 0.3319494, y: -0.050817516, z: 0.017912097, w: 0.9417571}
+  m_LocalPosition: {x: -13.444265, y: 98.26564, z: -219.4798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
