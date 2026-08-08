@@ -16,9 +16,11 @@ public class PlayerAttack : MonoBehaviour
     public AudioSource audioSource;
 
 
-    private float attackTimer;
+    private float attackTimer = 0f;
 
     private DamageableObject currentObject;
+
+    private NPCController currentNPC;
 
 
     void Update()
@@ -26,7 +28,10 @@ public class PlayerAttack : MonoBehaviour
         bool attack = false;
 
 
-        // Check if the keyboard is available
+        //========================================
+        // Check keyboard
+        //========================================
+
         if (Keyboard.current == null)
             return;
 
@@ -49,94 +54,51 @@ public class PlayerAttack : MonoBehaviour
 
         if (!attack)
         {
-            attackTimer = 0f;
-
-            currentObject = null;
-
-            if (progressUI != null)
-                progressUI.Hide();
+            ResetAttack();
 
             return;
         }
 
 
         //========================================
-        // Find objects inside attack range
+        // Find target
         //========================================
 
-        Collider[] hits =
-            Physics.OverlapSphere(
-                transform.position,
-                attackRange
-            );
+        FindTarget();
 
 
-        DamageableObject target = null;
+        //========================================
+        // No target
+        //========================================
 
-
-        foreach (Collider hit in hits)
+        if (currentObject == null &&
+            currentNPC == null)
         {
-            target =
-                hit.GetComponent<DamageableObject>();
-
-
-            if (target == null)
-            {
-                target =
-                    hit.GetComponentInParent<DamageableObject>();
-            }
-
-
-            // Only allow interaction with active DamageableObjects
-            if (target != null && target.enabled)
-            {
-                break;
-            }
-
-
-            target = null;
-        }
-
-
-        //========================================
-        // No target found
-        //========================================
-
-        if (target == null)
-        {
-            attackTimer = 0f;
-
-            currentObject = null;
-
-            if (progressUI != null)
-                progressUI.Hide();
+            ResetAttack();
 
             return;
         }
 
 
         //========================================
-        // New target
-        //========================================
-
-        if (currentObject != target)
-        {
-            currentObject = target;
-
-            attackTimer = 0f;
-
-            Debug.Log(
-                "New attack target: " +
-                currentObject.gameObject.name
-            );
-        }
-
-
-        //========================================
-        // Attack timer
+        // Increase attack timer
         //========================================
 
         attackTimer += Time.deltaTime;
+
+
+        //========================================
+        // Get attack duration
+        //========================================
+
+        float attackDuration = GetAttackDuration();
+
+
+        // Prevent division by zero
+        if (attackDuration <= 0f)
+        {
+            attackDuration = 0.1f;
+        }
 
 
         //========================================
@@ -146,18 +108,152 @@ public class PlayerAttack : MonoBehaviour
         if (progressUI != null)
         {
             float progress =
-                attackTimer /
-                currentObject.destroyTime;
+                attackTimer / attackDuration;
+
+            progress = Mathf.Clamp01(progress);
 
             progressUI.Show(progress);
         }
 
 
         //========================================
-        // Destroy / Damage object
+        // Attack completed
         //========================================
 
-        if (attackTimer >= currentObject.destroyTime)
+        if (attackTimer >= attackDuration)
+        {
+            CompleteAttack();
+        }
+    }
+
+
+    //==================================================
+    // Find Target
+    //==================================================
+
+    void FindTarget()
+    {
+        Collider[] hits =
+            Physics.OverlapSphere(
+                transform.position,
+                attackRange
+            );
+
+
+        DamageableObject newObject = null;
+
+        NPCController newNPC = null;
+
+
+        foreach (Collider hit in hits)
+        {
+            // Check for DamageableObject
+            newObject =
+                hit.GetComponent<DamageableObject>();
+
+
+            // If not found, check parent
+            if (newObject == null)
+            {
+                newObject =
+                    hit.GetComponentInParent<DamageableObject>();
+            }
+
+
+            // Check if the DamageableObject is active
+            if (newObject != null &&
+                !newObject.enabled)
+            {
+                newObject = null;
+            }
+
+
+            // Check for NPCController
+            newNPC =
+                hit.GetComponent<NPCController>();
+
+
+            // If not found, check parent
+            if (newNPC == null)
+            {
+                newNPC =
+                    hit.GetComponentInParent<NPCController>();
+            }
+
+
+            // Ignore already stopped NPCs
+            if (newNPC != null &&
+                newNPC.IsStopped())
+            {
+                newNPC = null;
+            }
+
+
+            //========================================
+            // Prefer DamageableObject
+            //========================================
+
+            if (newObject != null)
+            {
+                currentObject = newObject;
+
+                currentNPC = null;
+
+                break;
+            }
+
+
+            //========================================
+            // Otherwise use NPC
+            //========================================
+
+            if (newNPC != null)
+            {
+                currentNPC = newNPC;
+
+                currentObject = null;
+
+                break;
+            }
+        }
+    }
+
+
+    //==================================================
+    // Get Attack Duration
+    //==================================================
+
+    float GetAttackDuration()
+    {
+        // Normal object or Machine
+        if (currentObject != null)
+        {
+            return currentObject.destroyTime;
+        }
+
+
+        // NPC
+        if (currentNPC != null)
+        {
+            return currentNPC.attackTime;
+        }
+
+
+        return 1f;
+    }
+
+
+    //==================================================
+    // Complete Attack
+    //==================================================
+
+    void CompleteAttack()
+    {
+        //========================================
+        // Attack normal object or Machine
+        //========================================
+
+        if (currentObject != null)
         {
             Debug.Log(
                 "Attacking object: " +
@@ -168,37 +264,76 @@ public class PlayerAttack : MonoBehaviour
             currentObject.DestroyObject();
 
 
-            // Play attack sound
-            if (audioSource != null)
-            {
-                audioSource.Play();
-            }
+            PlayAttackSound();
 
 
-            // Reset attack timer
-            attackTimer = 0f;
+            ResetAttack();
+
+            return;
+        }
 
 
-            // Keep the same target if it still exists
-            if (currentObject != null)
-            {
-                // If the object has been destroyed,
-                // Unity will make this reference null.
-                if (currentObject == null)
-                {
-                    currentObject = null;
+        //========================================
+        // Attack NPC
+        //========================================
 
-                    if (progressUI != null)
-                        progressUI.Hide();
-                }
-            }
+        if (currentNPC != null)
+        {
+            Debug.Log(
+                "Attacking NPC: " +
+                currentNPC.gameObject.name
+            );
+
+
+            currentNPC.StopNPC();
+
+
+            PlayAttackSound();
+
+
+            ResetAttack();
+
+            return;
         }
     }
 
 
-    //========================================
+    //==================================================
+    // Reset Attack
+    //==================================================
+
+    void ResetAttack()
+    {
+        attackTimer = 0f;
+
+        currentObject = null;
+
+        currentNPC = null;
+
+
+        if (progressUI != null)
+        {
+            progressUI.Hide();
+        }
+    }
+
+
+    //==================================================
+    // Play Attack Sound
+    //==================================================
+
+    void PlayAttackSound()
+    {
+        if (audioSource != null)
+        {
+            audioSource.Play();
+        }
+    }
+
+
+    //==================================================
     // Attack Range Gizmo
-    //========================================
+    //==================================================
 
     private void OnDrawGizmosSelected()
     {
