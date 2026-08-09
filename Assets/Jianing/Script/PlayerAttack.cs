@@ -15,6 +15,9 @@ public class PlayerAttack : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
 
+    [Header("VFX")]
+    public GameObject hitVFXPrefab;
+
 
     private float attackTimer = 0f;
 
@@ -249,6 +252,7 @@ public class PlayerAttack : MonoBehaviour
 
     void CompleteAttack()
     {
+        Vector3 hitPos = transform.position;
         //========================================
         // Attack normal object or Machine
         //========================================
@@ -265,6 +269,8 @@ public class PlayerAttack : MonoBehaviour
 
 
             PlayAttackSound();
+
+            PlayHitVFX(hitPos);
 
 
             ResetAttack();
@@ -294,6 +300,21 @@ public class PlayerAttack : MonoBehaviour
             ResetAttack();
 
             return;
+        }
+    }
+    //==================================================
+    // Play Hit VFX
+    //==================================================
+
+    void PlayHitVFX(Vector3 spawnPosition)
+    {
+        if (hitVFXPrefab != null)
+        {
+            // Spawn the hit effect at the target position
+            GameObject vfxInstance = Instantiate(hitVFXPrefab, spawnPosition, Quaternion.identity);
+
+            // Automatically clean up the effect after 2 seconds
+            Destroy(vfxInstance, 2f);
         }
     }
 
