@@ -6,7 +6,8 @@ public class ControlsScreen : MonoBehaviour
 {
     public bool objectivePressed; // Checks if the Objective Button was pressed
     public bool returnPressed; // Checks if the Return Button was pressed
-    public SceneChanger sceneChanger;
+    public SceneChanger sceneChangerOne;
+    public SceneChanger sceneChangerTwo;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Start()
@@ -41,13 +42,12 @@ public class ControlsScreen : MonoBehaviour
 
     public void Objective()
     {
-        Debug.Log("Objective pressed");
+        sceneChangerTwo.changeScene = true;
     }
 
     public void Return()
     {
-        Debug.Log("Entered return void");
-        sceneChanger.changeScene = true;
+        sceneChangerOne.changeScene = true;
     }
 
 }
