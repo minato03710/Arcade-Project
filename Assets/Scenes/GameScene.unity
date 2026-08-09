@@ -1890,6 +1890,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (59)
@@ -3032,6 +3040,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (78)
@@ -3419,6 +3435,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (71)
@@ -4714,6 +4738,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (85)
@@ -4771,6 +4803,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (69)
@@ -5639,6 +5679,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (120)
@@ -5759,6 +5807,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (119)
@@ -6629,8 +6685,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398742847}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33039343, y: -0.051816445, z: 0.018169178, w: 0.94224477}
-  m_LocalPosition: {x: -12.742984, y: 101.89849, z: -224.46628}
+  m_LocalRotation: {x: 0.37535906, y: -0.020441413, z: 0.0082805175, w: 0.9266171}
+  m_LocalPosition: {x: -20.22423, y: 63.14334, z: -171.27063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6644,6 +6700,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (102)
@@ -6701,6 +6765,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (95)
@@ -7765,6 +7837,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (80)
@@ -8714,6 +8794,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (104)
@@ -8952,6 +9040,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (117)
@@ -9399,6 +9495,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (60)
@@ -9456,6 +9560,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (56)
@@ -10552,6 +10664,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (58)
@@ -11452,6 +11572,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (94)
@@ -11509,6 +11637,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (105)
@@ -11655,6 +11791,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (63)
@@ -11712,6 +11856,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (111)
@@ -12148,6 +12300,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (81)
@@ -12482,6 +12642,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (109)
@@ -13224,6 +13392,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (87)
@@ -14355,6 +14531,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (62)
@@ -15041,6 +15225,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (97)
@@ -15253,6 +15445,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (77)
@@ -15310,6 +15510,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (110)
@@ -15425,6 +15633,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (68)
@@ -15751,6 +15967,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (76)
@@ -16054,6 +16278,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (91)
@@ -17294,6 +17526,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (93)
@@ -17674,6 +17914,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (73)
@@ -19941,6 +20189,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (82)
@@ -20167,6 +20423,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (70)
@@ -20229,6 +20493,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (61)
@@ -20452,6 +20724,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (74)
@@ -21152,6 +21432,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (103)
@@ -21449,6 +21737,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (90)
@@ -21905,6 +22201,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (106)
@@ -22029,6 +22333,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (79)
@@ -22357,6 +22669,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (99)
@@ -22928,6 +23248,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (112)
@@ -23717,6 +24045,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (115)
@@ -23966,6 +24302,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (83)
@@ -24164,6 +24508,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (118)
@@ -25209,6 +25561,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (121)
@@ -25266,6 +25626,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (101)
@@ -27319,6 +27687,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (107)
@@ -28345,6 +28721,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (66)
@@ -28459,6 +28843,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (116)
@@ -28516,6 +28908,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (65)
@@ -28995,7 +29395,7 @@ MonoBehaviour:
   ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
   VerticalArmLength: 6
   CameraSide: 1
-  CameraDistance: 99.9999
+  CameraDistance: 33.76013
   AvoidObstacles:
     Enabled: 0
     CollisionFilter:
@@ -29056,8 +29456,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797586886}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.33039343, y: -0.051816445, z: 0.018169178, w: 0.94224477}
-  m_LocalPosition: {x: -12.742984, y: 101.89849, z: -224.46628}
+  m_LocalRotation: {x: 0.37535906, y: -0.020441413, z: 0.0082805175, w: 0.9266171}
+  m_LocalPosition: {x: -20.22423, y: 63.14334, z: -171.27063}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29071,6 +29471,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (98)
@@ -29602,6 +30010,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (108)
@@ -30516,147 +30932,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44017b29d7cf23c408073093c758f685, type: 3}
---- !u!1 &1872882547
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1872882552}
-  - component: {fileID: 1872882551}
-  - component: {fileID: 1872882550}
-  - component: {fileID: 1872882549}
-  - component: {fileID: 1872882548}
-  m_Layer: 0
-  m_Name: Boss (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1872882548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872882547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e8e24bf10339347a0b45635eef4f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  player1: {fileID: 755841543}
-  player2: {fileID: 1008840013}
-  moveSpeed: 18
-  minX: -100
-  maxX: 15
-  minZ: -85
-  maxZ: -220
-  detectRange: 30
-  loseRange: 40
-  damageScore: 10
-  knockbackForce: 20
-  waitTime: 2
---- !u!143 &1872882549
-CharacterController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872882547}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Height: 1
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1872882550
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872882547}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1872882551
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872882547}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1872882552
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872882547}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.6, y: 3.54, z: -49.6}
-  m_LocalScale: {x: 1.3565357, y: 5.4112206, z: 1.3565357}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1874383603
 GameObject:
   m_ObjectHideFlags: 0
@@ -30959,6 +31234,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (84)
@@ -31211,6 +31494,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (86)
@@ -31600,6 +31891,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (89)
@@ -31855,6 +32154,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (100)
@@ -32049,6 +32356,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (88)
@@ -32106,6 +32421,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (64)
@@ -33104,6 +33427,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (96)
@@ -33166,6 +33497,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (75)
@@ -33400,6 +33739,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (57)
@@ -34177,6 +34524,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (113)
@@ -34234,6 +34589,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (67)
@@ -35333,6 +35696,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (92)
@@ -35833,6 +36204,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (72)
@@ -35895,6 +36274,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: score
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630813062740081356, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
+      propertyPath: rotateSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3604702319109226181, guid: 08aec427373a30142bac8021d2dc6970, type: 3}
       propertyPath: m_Name
       value: Coin (114)
@@ -36920,7 +37307,6 @@ SceneRoots:
   - {fileID: 23762838}
   - {fileID: 1301329799}
   - {fileID: 848149873}
-  - {fileID: 1872882552}
   - {fileID: 1176592710}
   - {fileID: 979092652}
   - {fileID: 1310749445}
