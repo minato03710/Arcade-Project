@@ -46,7 +46,6 @@ public class HowToPlayScreen : MonoBehaviour
 
     public void Return()
     {
-        Debug.Log("Entered return void");
         sceneChanger.changeScene = true;
     }
 

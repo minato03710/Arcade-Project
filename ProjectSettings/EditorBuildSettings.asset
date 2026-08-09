@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Minato/HowToPlay.unity
     guid: feaffe6b7c90ff84ea14223e7a5456a3
   - enabled: 1
+    path: Assets/Minato/TV.unity
+    guid: 3bfb8c5e6fa493640b6e3ad0bfcede10
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 2636884c9be038c49b64bb334fcfc870
   - enabled: 0
