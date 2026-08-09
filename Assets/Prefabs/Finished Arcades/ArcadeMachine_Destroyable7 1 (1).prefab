@@ -72,7 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
   maxHealth: 2
   destroyTime: 1
-  scoreReward: 20
+  scoreReward: 60
 --- !u!1 &3173226680068815314
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,7 @@ public class NPCController : MonoBehaviour
     public float fallAngle = 90f;
     public float fallSpeed = 5f;
 
+    public int scoreReward;
 
     private CharacterController controller;
 
@@ -156,6 +157,11 @@ public class NPCController : MonoBehaviour
 
         // Start falling animation
         StartFalling();
+
+        if (GameManager.Instance != null) //Adds the points
+        {
+            GameManager.Instance.AddScore(scoreReward);
+        }
 
         Debug.Log(
             gameObject.name +

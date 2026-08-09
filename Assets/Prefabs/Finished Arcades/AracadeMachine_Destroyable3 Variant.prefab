@@ -5161,7 +5161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
   maxHealth: 2
   destroyTime: 1
-  scoreReward: 20
+  scoreReward: 60
 --- !u!198 &2692522346219085373 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 9177119306887625669, guid: 6fa5d668baaa78b489baa0f95fc9f3b4, type: 3}

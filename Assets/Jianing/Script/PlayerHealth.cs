@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject DeathIndicator;
+
     [Header("Health")]
     public int maxHealth = 5;
 
@@ -69,6 +71,8 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log(gameObject.name + " Down!");
 
+        DeathIndicator.SetActive(true);
+
         if (playerController != null)
         {
             playerController.enabled = false;
@@ -92,6 +96,7 @@ public class PlayerHealth : MonoBehaviour
             playerController.enabled = true;
         }
 
+        DeathIndicator.SetActive(false);
         Debug.Log(gameObject.name + " Revived!");
     }
 

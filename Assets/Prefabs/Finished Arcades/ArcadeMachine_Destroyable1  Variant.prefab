@@ -5024,7 +5024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
   maxHealth: 2
   destroyTime: 1
-  scoreReward: 20
+  scoreReward: 60
 --- !u!82 &2825082435919650339 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 6620596923193874429, guid: 128677825997acf4db465b8221b22738, type: 3}
