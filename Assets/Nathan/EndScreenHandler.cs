@@ -19,9 +19,9 @@ public class EndScreenHandler : MonoBehaviour
     [SerializeField] private GameManager gameManagerScript; //Put gameobject that has the script cointaining the score. Change "PointsExample" to script name that has the score
     [SerializeField] string replaySceneName;
     [SerializeField] string menuSceneName;
-    public int ScoreAmount; //The variable that represents the score taken from GameManager script
-    public int ScoreAddition; //The final score divided by 110 (calculated in GameEnd() - Reason: The end screen counts up to the final score in 11 seconds, adding points every 0.10s
-    public int finalScore = 0; //Score counter that will be used to count up to the final score
+    public float ScoreAmount; //The variable that represents the score taken from GameManager script
+    public float ScoreAddition; //The final score divided by 110 (calculated in GameEnd() - Reason: The end screen counts up to the final score in 11 seconds, adding points every 0.10s
+    public float finalScore = 0; //Score counter that will be used to count up to the final score
     public GameObject ReplayButton;
     public GameObject MenuButton;
     public GameObject CanvasPoints;
