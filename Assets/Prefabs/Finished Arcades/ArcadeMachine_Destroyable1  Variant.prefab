@@ -4932,6 +4932,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 6d907fe49cac19f449ce040a538e23ea, type: 2}
+    - target: {fileID: 6620596923193874429, guid: 128677825997acf4db465b8221b22738, type: 3}
+      propertyPath: MinDistance
+      value: 495.0495
+      objectReference: {fileID: 0}
     - target: {fileID: 6963154322390790582, guid: 128677825997acf4db465b8221b22738, type: 3}
       propertyPath: m_Name
       value: ArcadeMachine_Destroyable1  Variant
@@ -5004,7 +5008,7 @@ MonoBehaviour:
   sparksVFX: {fileID: 197142635125593234}
   smokeVFX: {fileID: 4183249657559750392}
   audioSource: {fileID: 2825082435919650339}
-  destroySFX: {fileID: 0}
+  destroySFX: {fileID: 8300000, guid: 08e5196f17f04294dbff922184015e4a, type: 3}
   electricLoopSFX: {fileID: 0}
 --- !u!114 &937592123788617988
 MonoBehaviour:
@@ -5018,7 +5022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d42a29df57b1fe4894fb258578a5063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
-  maxHealth: 5
+  maxHealth: 2
   destroyTime: 1
   scoreReward: 20
 --- !u!82 &2825082435919650339 stripped

@@ -53,7 +53,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 495.0495
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -5144,8 +5144,8 @@ MonoBehaviour:
   brokenModel: {fileID: 6884975501432895449}
   sparksVFX: {fileID: 2692522346219085373}
   smokeVFX: {fileID: 7168611448391861923}
-  audioSource: {fileID: 0}
-  destroySFX: {fileID: 8300000, guid: eab6470512b0fed41976703a0f206708, type: 3}
+  audioSource: {fileID: 2943960878435290121}
+  destroySFX: {fileID: 8300000, guid: 08e5196f17f04294dbff922184015e4a, type: 3}
   electricLoopSFX: {fileID: 0}
 --- !u!114 &7883220524448365821
 MonoBehaviour:
@@ -5159,7 +5159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d42a29df57b1fe4894fb258578a5063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageableObject
-  maxHealth: 5
+  maxHealth: 2
   destroyTime: 1
   scoreReward: 20
 --- !u!198 &2692522346219085373 stripped

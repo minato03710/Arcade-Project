@@ -4,6 +4,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    [SerializeField] private EndScreenHandler endScreenScript;
+    public GameObject endScriptGameObject;
+    [SerializeField] private PlayerHealth player1Health;
+    [SerializeField] private PlayerHealth player2Health;
+    private bool gameOver = false;
 
     [Header("UI")]
     public TMP_Text scoreText;
@@ -21,6 +26,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         UpdateScoreUI();
+    }
+
+    void Update()
+    {
+        CheckGameOver();
     }
 
     public void AddScore(int amount)
@@ -48,13 +58,18 @@ public class GameManager : MonoBehaviour
 
         UpdateScoreUI();
     }
-    public void CheckGameOver(PlayerHealth p1, PlayerHealth p2)
+    public void CheckGameOver()
     {
-        if (p1.IsDown && p2.IsDown)
+        if ((player1Health.currentHealth == 0) && (player2Health.currentHealth == 0) && !gameOver)
         {
+            gameOver = true;
+
             Debug.Log("GAME OVER");
 
-            Time.timeScale = 0f;
+            //Time.timeScale = 0f;
+
+            //endScreenScript.GameEnd();
+            endScriptGameObject.SetActive(true);
         }
     }
 }

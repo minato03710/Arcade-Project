@@ -16,7 +16,7 @@ public class EndScreenHandler : MonoBehaviour
     //  - CanvasPoints = Inactive
     //  - CanvasBG = Inactive
 
-    [SerializeField] private PointsExample gameManagerScript; //Put gameobject that has the script cointaining the score. Change "PointsExample" to script name that has the score
+    [SerializeField] private GameManager gameManagerScript; //Put gameobject that has the script cointaining the score. Change "PointsExample" to script name that has the score
     [SerializeField] string replaySceneName;
     [SerializeField] string menuSceneName;
     public float ScoreAmount; //The variable that represents the score taken from GameManager script
@@ -44,6 +44,7 @@ public class EndScreenHandler : MonoBehaviour
 
     public void GameEnd()
     {
+        Time.timeScale = 1f;
         CanvasBG.SetActive(true);
         CanvasPoints.SetActive(true);
 
@@ -57,11 +58,15 @@ public class EndScreenHandler : MonoBehaviour
 
     public void Replay()
     {
+        Time.timeScale = 1f;
+        Debug.Log("Clicked Replay Button");
         SceneManager.LoadScene(replaySceneName);
     }
 
     public void Menu()
     {
+        Time.timeScale = 1f;
+        Debug.Log("Clicked Menu Button");
         SceneManager.LoadScene(menuSceneName);
     }
 
@@ -72,7 +77,7 @@ public class EndScreenHandler : MonoBehaviour
         {
             finalScore += ScoreAddition;
             ScoreUI.text = finalScore.ToString();
-            yield return new WaitForSeconds(0.10f);
+            yield return new WaitForSecondsRealtime(0.10f);
         }
 
         finalScore = ScoreAmount;
